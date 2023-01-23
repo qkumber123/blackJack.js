@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Blackjack</title>
+    <style>
+        body {
+            background-color: rgb(11, 19, 14);
+            color:  rgb(36, 104, 59);
+            font-weight: bolder;
+            font-size: 24px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .busted {
+            color: rgb(150, 0, 0);
+            height: 2vh;
+        }
+        .results {
+            font-size: 52px;
+            color: yellowgreen;
+            height: 4vh;
+        }
+        
+    </style>
+    
+</head>
+<body>
+    <center>
+    
+    <div style="padding-top: 20vh;" class="cardContainer">
+        <div class="results" id="results"></div><br>
+        Dealer Hand<br>
+        <div id="dealerHand" style="padding-top: 3vh"></div>
+        <br>
+        <div class="busted" id="dealerBusted"></div>
+    </div>
+    <div style="padding-top: 13vh;" class="cardContainer">
+        Player Hand<br>
+        <div id="playerHand" style="padding-top: 3vh"></div>
+        <br>
+        <div class="busted" id="playerBusted"></div>
+    </div>
+
+    
+    <br><br>
+    <button type="button" onClick="playerDraw()" id="drawButton">Draw Card</button>
+    <button type="button" onClick="dealerDraw()" id="holdButton">Hold</button>
+    <button type="button" onClick="startGame()" id="newGame" >New Game+</button>
+    <br><br>
+
+    <div class="results" id="score">ERROR</div>
+    </center>
+
+    <script src="./script.js" ></script>
+</body>
+</html>
