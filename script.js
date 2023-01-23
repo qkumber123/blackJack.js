@@ -74,8 +74,6 @@ function playerDraw() {
     let potOfGreed=draw(deck, 1, pos);
     pos = potOfGreed[1];
     playerHand = playerHand.concat(potOfGreed[0]);
-    console.log(playerHand);
-    console.log(scoreHand(playerHand));
     // update playerhand
     document.getElementById("playerHand").innerHTML = playerHand;
     //check if busted
@@ -98,8 +96,6 @@ function dealerDraw() {
         let potOfGreed=draw(deck, 1, pos);
         pos = potOfGreed[1];
         dealerHand = dealerHand.concat(potOfGreed[0]);
-        console.log(dealerHand);
-        console.log(scoreHand(dealerHand));
     }
 
     let dealerScore = scoreHand(dealerHand);
@@ -168,11 +164,8 @@ function startGame() {
     potOfGreed = draw(deck, 2, pos);
     pos = potOfGreed[1];
     playerHand = potOfGreed[0];
-    console.log(playerHand);
-    console.log(scoreHand(playerHand));
     document.getElementById("dealerHand").innerHTML = '?, ' + dealerHand[1];
     document.getElementById("playerHand").innerHTML = playerHand;    
     trapCard();
-    console.log(wins);
 }
 startGame();
